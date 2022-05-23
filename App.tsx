@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { DataTable } from 'react-native-paper';
 import TitleText from './component/TitleText';
 
 export default function App() {
@@ -65,23 +66,45 @@ export default function App() {
       <Text>{"\n\n"}Exercice 4</Text>
       <TitleText title='Le titre de mon article' text='Le texte de mon article' />
 
-      <Text>{"\n\n"}Exercice 5</Text>
-      <Text>
+      <Text>{"\n\n"}Exercice 5 (DataTable avec React Native Paper</Text>
+      <DataTable>
+        <DataTable.Header>
+          <DataTable.Title>Name</DataTable.Title>
+          <DataTable.Title>Tél</DataTable.Title>
+          <DataTable.Title>Mail</DataTable.Title>
+          <DataTable.Title>Age</DataTable.Title>
+          <DataTable.Title>Log</DataTable.Title>
+          <DataTable.Title>Adm</DataTable.Title>
+        </DataTable.Header>
         {
           myArray.map( (item, i) => (
-            <>
-              <Text>Nom : {item.Username}{"\n\n"}</Text>
-              <Text>Téléphone : {item.Phone}{"\n\n"}</Text>
-              <Text>Mail : {item.Mail}{"\n\n"}</Text>
-              <Text>Age : {item.Age}{"\n\n"}</Text>
-              <Text>Téléphone : {item.Phone}{"\n\n"}</Text>
-              <Text>isLogged : {item.isLogged === true ? 'oui' : 'non'}{"\n\n"}</Text>
-              <Text>isAdmin : {item.isAdmin === true ? 'oui' : 'non'}{"\n\n"}</Text>
-              <Text>{"\n\n"}</Text>
-            </>
+            <DataTable.Row key={i}>
+              <DataTable.Cell>{item.Username}</DataTable.Cell>
+              <DataTable.Cell>{item.Phone}</DataTable.Cell>
+              <DataTable.Cell>{item.Mail}</DataTable.Cell>
+              <DataTable.Cell >{item.Age}</DataTable.Cell>
+              <DataTable.Cell>{item.isLogged === true ? 'Y' : '-'}</DataTable.Cell>
+              <DataTable.Cell>{item.isAdmin === true ? 'Y' : '-'}</DataTable.Cell>
+            </DataTable.Row>
           ))
         }
-      </Text>
+     </DataTable>
+
+     <Text>{"\n\n"}Exercice 5</Text>
+     {
+          myArray.map( (item, i) => (
+            <>
+              <Text key={i}>
+                Nom : {item.Username}{"\n\n"}
+                Téléphone : {item.Phone}{"\n\n"}
+                Mail : {item.Mail}{"\n\n"}
+                Age : {item.Age}{"\n\n"}
+                isLogged : {item.isLogged === true ? 'oui' : 'non'}{"\n\n"}
+                isAdmin : {item.isAdmin === true ? 'oui' : 'non'}{"\n\n"}{"\n\n"}</Text>
+            </>
+          ))
+      }
+
       <StatusBar style="auto" />
       </ScrollView>
     </View>
@@ -96,3 +119,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+/*
+
+*/

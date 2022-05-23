@@ -1,6 +1,6 @@
 import { Text } from 'react-native';
 
-export type TitleTextProps = {
+type TitleTextProps = {
     title: string;
     text: string;
 }
