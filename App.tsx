@@ -16,15 +16,8 @@ export default function App() {
   // exercice3 : voir component/TitleText.tsx
 
   // exercice 4
-  interface user {
-    Username: string;
-    Phone: string;
-    Mail: string;
-    Age: number;
-    isLogged: boolean;
-    isAdmin: boolean | unknown;
-  }
-  let myArray:Array<user> = [
+  // voir interface dans ./interfaces/IUser.tsx
+  let myArray:Array<IUser> = [
     {
       Username: 'Alain',
       Phone: '0102030405',
@@ -94,13 +87,12 @@ export default function App() {
      {
           myArray.map( (item, i) => (
             <>
-              <Text key={i}>
-                Nom : {item.Username}{"\n\n"}
-                Téléphone : {item.Phone}{"\n\n"}
-                Mail : {item.Mail}{"\n\n"}
-                Age : {item.Age}{"\n\n"}
-                isLogged : {item.isLogged === true ? 'oui' : 'non'}{"\n\n"}
-                isAdmin : {item.isAdmin === true ? 'oui' : 'non'}{"\n\n"}{"\n\n"}</Text>
+              <Text key={i}>Nom : {item.Username}</Text>
+              <Text>Téléphone : {item.Phone}</Text>
+              <Text>Mail : {item.Mail}</Text>
+              <Text>Age : {item.Age}</Text>
+              <Text>isLogged : {item.isLogged === true ? 'oui' : 'non'}</Text>
+              <Text>isAdmin : {item.isAdmin === true ? 'oui' : 'non'}{"\n\n"}</Text>
             </>
           ))
       }
