@@ -33,3 +33,12 @@ Exercice 4 : Dans un nouveau projet expo avec le template TS, créer une interf
 - isAdmin : booléen ou non défini
 
 Créer un tableau de type user et définir 3 utilisateurs. Les afficher.
+
+----------
+
+A la création du projet :
+
+$ expo init
+
+=> choisir _blank typescript
+
