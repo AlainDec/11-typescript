@@ -1,7 +1,7 @@
 import { Text } from 'react-native';
-import { ITitleTextProps } from '../interfaces/TitleTextProps';
+import { TitleTextProps } from '../interfaces/TitleTextProps';
 
-const TitleText = (props: ITitleTextProps) => {
+const TitleText = (props: TitleTextProps) => {
     const {title, text} = props;
 
     return (

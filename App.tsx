@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { DataTable } from 'react-native-paper';
 import TitleText from './component/TitleText';
+import React from 'react';
 
 export default function App() {
 
@@ -44,9 +45,11 @@ export default function App() {
     }
   ];
 
+  
   return (
     <View style={styles.container}>
       <ScrollView>
+
       <Text>{"\n\n"}Exercice 1</Text>
       <Text>Je m'appelle {name} et j'ai {age} ans (let)</Text>
 

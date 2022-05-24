@@ -4,5 +4,10 @@ interface IUser {
     Mail: string;
     Age: number;
     isLogged: boolean;
-    isAdmin: boolean | unknown;
+    isAdmin: boolean | undefined;
+  }
+
+  interface IHello {
+    name: string;
+    enthusiasmLevel?: number;
   }
